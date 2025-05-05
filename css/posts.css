@@ -1,0 +1,21 @@
+.item-post
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    border: 1px solid green;
+    width: 50%;
+}
+
+.pagination
+{
+    display: flex;
+    
+    justify-content: center;
+}
+
+.pages-btn{
+    margin-left: 5px;
+    margin-right: 5px;
+}

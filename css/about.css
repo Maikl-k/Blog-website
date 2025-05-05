@@ -1,0 +1,19 @@
+.creator-of-blog
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-of-creator-of-blog
+{
+    width: 300px;
+}
+
+.team
+{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

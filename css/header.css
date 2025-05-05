@@ -1,0 +1,30 @@
+.header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-links
+{
+    display: flex;
+    
+}
+
+.account-info
+{
+    display: flex;
+}
+.logo
+{
+    display: flex;
+}
+
+.links
+{
+    margin: auto 20px;
+}
+
+.a-atr1
+{
+    margin: auto 10px;
+}

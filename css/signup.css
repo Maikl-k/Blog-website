@@ -1,0 +1,31 @@
+.main-s
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sign-up-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email, #username, #loginName, #password, #conf-password
+{
+    margin: 10px auto;
+}
+
+#signUp-btn
+{
+    background-color: green;
+    color: white;
+}
