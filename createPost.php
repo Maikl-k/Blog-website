@@ -54,15 +54,15 @@ if (!isset($_SESSION['loggedin'])) {
 
 include 'database/connectToDatabase.php';
 
-//grab data
-$postTitle = $_POST['postTitle'];
-$postContent = $_POST['postContent'];
+
 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-
+    //grab data
+    $postTitle = $_POST['postTitle'];
+    $postContent = $_POST['postContent'];
 
     $errors = false;
 

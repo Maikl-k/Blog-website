@@ -41,12 +41,14 @@
 
 <?php
 include 'database/connectToDatabase.php';
-// grab data from form
-$loginName = $_POST['loginName'];
-$password = $_POST["password"];
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // grab data from form
+    $loginName = $_POST['loginName'];
+    $password = $_POST["password"];
+
     $errors = false;
 
     
@@ -71,7 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$errors) {
 
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
 
         $statement = $conn->prepare('SELECT UserID ,userName, userEmail, loginName, userPassword FROM Users WHERE loginName = ? ');
         $statement->bind_param('s', $_POST['loginName']);
