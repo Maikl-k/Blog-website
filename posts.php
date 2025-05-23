@@ -164,5 +164,6 @@ function postsPreprocessing()
 
 
 <?php
+include 'database/connectToDatabase.php';
 $conn->close();
 ?>
