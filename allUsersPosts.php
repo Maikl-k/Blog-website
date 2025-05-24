@@ -39,6 +39,12 @@ function showUsersPosts()
 
 
 
+<?php
+
+
+?>
+
+
 
 
 
@@ -64,7 +70,7 @@ function showUsersPosts()
             <?php showUsersPosts(); ?>
 
             <div class="delete-post-s">
-                <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="GET" id="delete-post-form"
+                <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST" id="delete-post-form"
                     name="delete-post-form">
                     <input type="text" placeholder="type title of post to delete" name="title-post-to-delete-input-f"
                         id="title-post-to-delete-input-f">
@@ -93,10 +99,11 @@ function deletePost()
 {
     include 'database/connectToDatabase.php';
 
-    $toDeletePostTitle = $_GET['title-post-to-delete-input-f'];
+    
 
-    if ($_SERVER['REQUEST_METHOD'] == "GET") {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
         
+        $toDeletePostTitle = $_POST['title-post-to-delete-input-f'];
 
         $errors = false;
         if (empty($toDeletePostTitle)) {
